@@ -9,7 +9,7 @@ export default function List() {
   const [colors, setColors] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [colorsPerPage, setColorsPerPage] = useState(8);
+  const colorsPerPage = 12;
 
   // For now we fetch locally for colors, when an API endpoint is created we can fetch from server.
   useEffect(() => {
@@ -34,16 +34,17 @@ export default function List() {
   }
 
   return (
-    <section id="list-section">
-      {currentColors.map(color => (
-        <Card hexString={color.hexString} />
-      ))}
-
+    <React.Fragment>
+      <section id="list-section">
+        {currentColors.map(color => (
+          <Card key={color.colorId} hexString={color.hexString} />
+        ))}
+      </section>
       <Pagination
         colorsPerPage={colorsPerPage}
         totalColors={colors.length}
         paginate={paginate}
       />
-    </section>
+    </React.Fragment>
   );
 }

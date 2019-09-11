@@ -1,4 +1,5 @@
 import React from "react";
+import "./Pagination.css";
 
 export default function Pagination({ totalColors, colorsPerPage, paginate }) {
   const pages = [];
@@ -7,16 +8,25 @@ export default function Pagination({ totalColors, colorsPerPage, paginate }) {
   }
 
   return (
-    <div>
-      <ul className="pagination">
-        {pages.map(num => (
-          <li key={num} className="page-num">
-            <a onClick={() => paginate(num)} href="#0" className="page-link">
-              {num}
-            </a>
-          </li>
-        ))}
-      </ul>
+    <div className="pages">
+      <a href="#0" className="page-link">
+        &laquo;
+      </a>
+
+      {pages.map(num => (
+        <a
+          key={num}
+          onClick={() => paginate(num)}
+          href="#0"
+          className="page-link"
+        >
+          {num}
+        </a>
+      ))}
+
+      <a href="#0" className="page-link">
+        &raquo;
+      </a>
     </div>
   );
 }

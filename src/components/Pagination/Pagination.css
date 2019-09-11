@@ -1,3 +1,17 @@
-.pagination {
-  margin-left: 50px;
+.pages {
+  width: 80%;
+  margin-left: 20%;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.page-link {
+  padding: 8px 16px;
+  font-size: 20px;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.page-link:hover {
+  background-color: #c0c0c0;
 }
