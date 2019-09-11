@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Pagination({ totalCards, cardsPerPage }) {
+export default function Pagination({ totalColors, colorsPerPage, paginate }) {
   const pages = [];
-  for (let i = 1; i <= Math.ceil(totalCards / cardsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalColors / colorsPerPage); i++) {
     pages.push(i);
   }
 
@@ -11,12 +11,11 @@ export default function Pagination({ totalCards, cardsPerPage }) {
       <ul className="pagination">
         {pages.map(num => (
           <li key={num} className="page-num">
-            <a href="#0" className="page-link">
+            <a onClick={() => paginate(num)} href="#0" className="page-link">
               {num}
             </a>
           </li>
         ))}
-        >
       </ul>
     </div>
   );

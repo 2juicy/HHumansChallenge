@@ -23,15 +23,27 @@ export default function List() {
     })().catch(err => console.error(err));
   }, []);
 
+  const indexOfLast = currentPage * colorsPerPage;
+  const indexOfFirst = indexOfLast - colorsPerPage;
+  const currentColors = colors.slice(indexOfFirst, indexOfLast);
+
+  const paginate = page => setCurrentPage(page);
+
   if (loading) {
     return <h1 style={{ textAlign: "center" }}>Loading...</h1>;
   }
 
   return (
     <section id="list-section">
-      {colors.map(color => (
+      {currentColors.map(color => (
         <Card hexString={color.hexString} />
       ))}
+
+      <Pagination
+        colorsPerPage={colorsPerPage}
+        totalColors={colors.length}
+        paginate={paginate}
+      />
     </section>
   );
 }
