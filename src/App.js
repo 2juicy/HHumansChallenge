@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import List from "./components/List/List";
+import Detail from "./components/Detail/Detail";
 
 export default function App() {
   return (
@@ -10,6 +11,8 @@ export default function App() {
       <Header />
       <Sidebar />
       <List />
+
+      <Detail />
     </div>
   );
 }

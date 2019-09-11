@@ -1,0 +1,8 @@
+#detail {
+  margin-left: 20%;
+  padding-top: 50px;
+}
+
+#detail > .card {
+  width: 80%;
+}
