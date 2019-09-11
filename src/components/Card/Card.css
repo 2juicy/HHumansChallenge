@@ -11,6 +11,7 @@
   height: 80%;
   border-radius: 15px 15px 0 0;
   background-color: #cffff1;
+  cursor: pointer;
 }
 
 .card-text {
@@ -24,4 +25,11 @@
   text-align: center;
   vertical-align: middle;
   font-size: 22px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .card {
+    width: calc(100vw / 3);
+    margin: 5px;
+  }
 }
