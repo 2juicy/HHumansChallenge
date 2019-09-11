@@ -23,6 +23,10 @@ export default function List() {
     })().catch(err => console.error(err));
   }, []);
 
+  if (loading) {
+    return <h1 style={{ textAlign: "center" }}>Loading...</h1>;
+  }
+
   return (
     <section id="list-section">
       {colors.map(color => (
