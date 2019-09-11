@@ -46,7 +46,7 @@ Keep track of how much time you spent on the challenge but also feel free to spe
 ## Stretch Goals
 
 - Design
-  - Make it responsive
+  - [x] Make it responsive
 - Functionality
   - Generate color list from a script
 
