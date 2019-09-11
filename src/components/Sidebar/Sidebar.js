@@ -3,16 +3,20 @@ import "./Sidebar.css";
 
 export default function Sidebar() {
   return (
-    <section id="sidebar">
-      <button className="random">Random Color</button>
-      <button className="colors">Red</button>
-      <button className="colors">Orange</button>
-      <button className="colors">Yellow</button>
-      <button className="colors">Green</button>
-      <button className="colors">Blue</button>
-      <button className="colors">Purple</button>
-      <button className="colors">Brown</button>
-      <button className="colors">Gray</button>
+    <section className="sidebar">
+      <div className="random-button">
+        <button className="random">Random Color</button>
+      </div>
+      <div className="flex">
+        <a className="colors">Red</a>
+        <a className="colors">Orange</a>
+        <a className="colors">Yellow</a>
+        <a className="colors">Green</a>
+        <a className="colors">Blue</a>
+        <a className="colors">Purple</a>
+        <a className="colors">Brown</a>
+        <a className="colors">Gray</a>
+      </div>
     </section>
   );
 }
