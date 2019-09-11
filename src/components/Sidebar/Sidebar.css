@@ -113,8 +113,16 @@
 }
 
 @media only screen and (max-width: 1023px) {
-  .random,
+  .random {
+    font-size: 12px;
+  }
   .colors {
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  #sidebar-logo img {
+    height: 50px;
   }
 }
