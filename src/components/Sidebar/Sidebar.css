@@ -55,12 +55,14 @@
   cursor: pointer;
 }
 
-.random:focus {
+.random:focus,
+.clear-button > button:focus {
   outline: none;
 }
 
 .colors:hover,
-.random:hover {
+.random:hover,
+.clear-button > button:hover {
   text-decoration: underline;
   background: red;
   background: -webkit-linear-gradient(

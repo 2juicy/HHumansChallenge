@@ -6,6 +6,16 @@ export default function Detail() {
   return (
     <div id="detail">
       <Card />
+      <div className="flex-detail">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+      <div className="clear-button">
+        <button>Clear</button>
+      </div>
     </div>
   );
 }
