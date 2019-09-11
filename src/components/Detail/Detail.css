@@ -23,7 +23,7 @@
 }
 
 .flex-detail > .card {
-  width: calc(100vw / 8);
+  width: calc(80vw / 6);
   height: 150px;
 }
 
