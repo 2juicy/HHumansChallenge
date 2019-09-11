@@ -10,7 +10,35 @@
   border: 1px solid black;
 }
 
-#detail p {
+#detail > .card p {
   font-size: 32px;
   font-weight: bolder;
+}
+
+.flex-detail {
+  padding-top: 25px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: center;
+}
+
+.flex-detail > .card {
+  width: calc(100vw / 8);
+  height: 150px;
+}
+
+.clear-button {
+  margin: 10px 0 15px 0;
+  text-align: center;
+}
+
+.clear-button > button {
+  width: 200px;
+  height: 50px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
 }
