@@ -41,7 +41,7 @@ Keep track of how much time you spent on the challenge but also feel free to spe
   - [x] Paginate your data to show a certain number of swatches at a time
   - [x] Display both the color swatch and the label of the color
   - Ability to select random color and modify view accordingly
-  - Clicking swatch changes to color detail view
+  - [x] Clicking swatch changes to color detail view
 
 ## Stretch Goals
 
