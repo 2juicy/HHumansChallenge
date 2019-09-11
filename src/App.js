@@ -34,10 +34,16 @@ export default function App() {
 
   // Functions for event handling
   const paginate = page => setCurrentPage(page);
+  const randomColor = () => {
+    setShowDetail(true);
+    const randomize = Math.floor(Math.random() * colors.length);
+    setDetailColor(colors[randomize]);
+    setDetailColors(colors.slice(randomize + 1, randomize + 6));
+  };
   const details = colorId => {
     setShowDetail(true);
-    setDetailColors(colors.slice(colorId + 1, colorId + 6));
     setDetailColor(colors[colorId]);
+    setDetailColors(colors.slice(colorId + 1, colorId + 6));
   };
   const clearDetail = () => {
     setShowDetail(false);
@@ -46,7 +52,7 @@ export default function App() {
   return (
     <div>
       <Header />
-      <Sidebar />
+      <Sidebar random={randomColor} />
       {!showDetail ? (
         <React.Fragment>
           <List colors={currentColors} loading={loading} details={details} />

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Sidebar.css";
 
-export default function Sidebar() {
+export default function Sidebar({ random }) {
   return (
     <section className="sidebar">
       <div id="sidebar-logo">
@@ -13,7 +13,9 @@ export default function Sidebar() {
         </a>
       </div>
       <div className="random-button">
-        <button className="random">Random Color</button>
+        <button onClick={random} className="random">
+          Random Color
+        </button>
       </div>
       <div className="flex">
         <a href="#0" className="colors">
