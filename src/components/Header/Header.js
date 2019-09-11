@@ -8,7 +8,7 @@ export default function Header() {
         <a href="#0">
           <img
             alt="Helpful Humans"
-            src={process.env.PUBLIC_URL + "assets/logo.svg"}
+            src={process.env.PUBLIC_URL + "/assets/logo.svg"}
           />
         </a>
       </div>

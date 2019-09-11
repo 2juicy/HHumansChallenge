@@ -8,7 +8,7 @@ export default function Sidebar({ random }) {
         <a href="#0">
           <img
             alt="Helpful Humans"
-            src={process.env.PUBLIC_URL + "assets/blacklogo.png"}
+            src={process.env.PUBLIC_URL + "/assets/blacklogo.png"}
           />
         </a>
       </div>
