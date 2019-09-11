@@ -241,18 +241,18 @@
 },
 {
 "colorId": 16,
-"hexString": "#000000",
+"hexString": "#080808",
 "rgb": {
-"r": 0,
-"g": 0,
-"b": 0
+"r": 8,
+"g": 8,
+"b": 8
 },
 "hsl": {
 "h": 0,
 "s": 0,
-"l": 0
+"l": 3
 },
-"name": "Grey0"
+"name": "Grey3"
 },
 {
 "colorId": 17,

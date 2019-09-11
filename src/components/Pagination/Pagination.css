@@ -15,3 +15,7 @@
 .page-link:hover {
   background-color: #c0c0c0;
 }
+
+.page-link:focus {
+  color: red;
+}
