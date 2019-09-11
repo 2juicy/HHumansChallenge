@@ -4,5 +4,13 @@
 }
 
 #detail > .card {
-  width: 80%;
+  width: 95%;
+  height: 70vh;
+  margin: auto;
+  border: 1px solid black;
+}
+
+#detail p {
+  font-size: 32px;
+  font-weight: bolder;
 }
