@@ -41,6 +41,10 @@
   cursor: pointer;
 }
 
+.random:focus {
+  outline: none;
+}
+
 .colors:hover,
 .random:hover {
   text-decoration: underline;
