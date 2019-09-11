@@ -8,14 +8,30 @@ export default function Sidebar() {
         <button className="random">Random Color</button>
       </div>
       <div className="flex">
-        <a className="colors">Red</a>
-        <a className="colors">Orange</a>
-        <a className="colors">Yellow</a>
-        <a className="colors">Green</a>
-        <a className="colors">Blue</a>
-        <a className="colors">Purple</a>
-        <a className="colors">Brown</a>
-        <a className="colors">Gray</a>
+        <a href="#0" className="colors">
+          Red
+        </a>
+        <a href="#0" className="colors">
+          Orange
+        </a>
+        <a href="#0" className="colors">
+          Yellow
+        </a>
+        <a href="#0" className="colors">
+          Green
+        </a>
+        <a href="#0" className="colors">
+          Blue
+        </a>
+        <a href="#0" className="colors">
+          Purple
+        </a>
+        <a href="#0" className="colors">
+          Brown
+        </a>
+        <a href="#0" className="colors">
+          Gray
+        </a>
       </div>
     </section>
   );
