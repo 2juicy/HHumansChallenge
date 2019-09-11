@@ -10,6 +10,8 @@ import Detail from "./components/Detail/Detail";
 export default function App() {
   const [colors, setColors] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [showDetail, setShowDetail] = useState(false);
+  const [detailColors, setDetailColors] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const colorsPerPage = 12;
 
@@ -30,19 +32,27 @@ export default function App() {
   const currentColors = colors.slice(indexOfFirst, indexOfLast);
 
   const paginate = page => setCurrentPage(page);
+  const details = colorId => {
+    setShowDetail(true);
+    setDetailColors(colors.slice(colorId, colorId + 4));
+  };
 
   return (
     <div>
       <Header />
       <Sidebar />
-      <List colors={currentColors} loading={loading} />
-      <Pagination
-        colorsPerPage={colorsPerPage}
-        totalColors={colors.length}
-        paginate={paginate}
-      />
-
-      {/* <Detail /> */}
+      {!showDetail ? (
+        <React.Fragment>
+          <List colors={currentColors} loading={loading} details={details} />
+          <Pagination
+            colorsPerPage={colorsPerPage}
+            totalColors={colors.length}
+            paginate={paginate}
+          />
+        </React.Fragment>
+      ) : (
+        <Detail colors={detailColors} details={details} />
+      )}
     </div>
   );
 }

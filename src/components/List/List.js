@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 
 import "./List.css";
 
-export default function List({ colors, loading }) {
+export default function List({ colors, loading, details }) {
   if (loading) {
     return <h1 style={{ textAlign: "center" }}>Loading...</h1>;
   }
@@ -11,7 +11,7 @@ export default function List({ colors, loading }) {
   return (
     <section id="list-section">
       {colors.map(color => (
-        <Card key={color.colorId} hexString={color.hexString} />
+        <Card key={color.colorId} color={color} details={details} />
       ))}
     </section>
   );
