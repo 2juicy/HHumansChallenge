@@ -24,6 +24,7 @@
 
 .flex-detail > .card {
   width: calc(80vw / 6);
+  margin: 0 10px 15px 10px;
   height: 150px;
 }
 
@@ -41,4 +42,14 @@
   border-radius: 10px;
   border: 1px solid black;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1023px) {
+  .flex-detail {
+    grid-template-columns: auto auto auto;
+  }
+  .flex-detail > .card {
+    width: calc(80vw / 3);
+    height: 100px;
+  }
 }
