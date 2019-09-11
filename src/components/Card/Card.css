@@ -1,0 +1,27 @@
+.card {
+  width: calc(100vw / 6);
+  height: 200px;
+  margin: 0 1em 1em 1em;
+  border-radius: 15px;
+  box-shadow: 0 0 0 3px #e3e3e3;
+}
+
+.card-color {
+  width: 100%;
+  height: 80%;
+  border-radius: 15px 15px 0 0;
+  background-color: #cffff1;
+}
+
+.card-text {
+  margin-left: 1.5em;
+  height: 20%;
+  display: table;
+}
+
+.card-text > p {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 22px;
+}

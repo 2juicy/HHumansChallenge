@@ -2,7 +2,7 @@
   height: 100px;
   background-color: #363c3c;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
 }
 

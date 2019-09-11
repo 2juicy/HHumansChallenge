@@ -1,4 +1,7 @@
 #list-section {
   margin-left: 20%;
-  padding: 50px 0 0 2em;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
 }
