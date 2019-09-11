@@ -8,10 +8,6 @@ export default function Detail() {
       <Card />
       <div className="flex-detail">
         <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
       </div>
       <div className="clear-button">
         <button>Clear</button>

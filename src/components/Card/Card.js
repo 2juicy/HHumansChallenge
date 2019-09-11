@@ -1,12 +1,12 @@
 import React from "react";
 import "./Card.css";
 
-export default function Card() {
+export default function Card({ hexString }) {
   return (
     <div className="card">
-      <div className="card-color"></div>
+      <div className="card-color" style={{ backgroundColor: hexString }}></div>
       <div className="card-text">
-        <p>#cffff1</p>
+        <p>{hexString}</p>
       </div>
     </div>
   );

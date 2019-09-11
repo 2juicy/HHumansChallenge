@@ -11,7 +11,7 @@ export default function App() {
       <Sidebar />
       <List />
 
-      <Detail />
+      {/* <Detail /> */}
     </div>
   );
 }
