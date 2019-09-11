@@ -4,6 +4,14 @@ import "./Sidebar.css";
 export default function Sidebar() {
   return (
     <section className="sidebar">
+      <div id="sidebar-logo">
+        <a href="#0">
+          <img
+            alt="Helpful Humans"
+            src={process.env.PUBLIC_URL + "assets/blacklogo.png"}
+          />
+        </a>
+      </div>
       <div className="random-button">
         <button className="random">Random Color</button>
       </div>

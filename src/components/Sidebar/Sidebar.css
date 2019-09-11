@@ -4,8 +4,21 @@
   background-color: #d6d8d8;
   position: fixed;
   top: 0;
-  padding-top: 100px;
   z-index: 1;
+}
+
+#sidebar-logo {
+  display: flex;
+}
+
+#sidebar-logo > a {
+  margin: auto;
+}
+
+#sidebar-logo img {
+  justify-content: center;
+  margin-top: 10px;
+  height: 90px;
 }
 
 .random-button {
