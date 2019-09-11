@@ -11,6 +11,7 @@ export default function App() {
   const [colors, setColors] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showDetail, setShowDetail] = useState(false);
+  const [detailColor, setDetailColor] = useState();
   const [detailColors, setDetailColors] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const colorsPerPage = 12;
@@ -31,10 +32,15 @@ export default function App() {
   const indexOfFirst = indexOfLast - colorsPerPage;
   const currentColors = colors.slice(indexOfFirst, indexOfLast);
 
+  // Functions for event handling
   const paginate = page => setCurrentPage(page);
   const details = colorId => {
     setShowDetail(true);
-    setDetailColors(colors.slice(colorId, colorId + 4));
+    setDetailColors(colors.slice(colorId + 1, colorId + 6));
+    setDetailColor(colors[colorId]);
+  };
+  const clearDetail = () => {
+    setShowDetail(false);
   };
 
   return (
@@ -51,7 +57,12 @@ export default function App() {
           />
         </React.Fragment>
       ) : (
-        <Detail colors={detailColors} details={details} />
+        <Detail
+          detailColor={detailColor}
+          colors={detailColors}
+          details={details}
+          clear={clearDetail}
+        />
       )}
     </div>
   );

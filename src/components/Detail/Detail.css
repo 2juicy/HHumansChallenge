@@ -46,7 +46,7 @@
 
 @media only screen and (max-width: 1023px) {
   .flex-detail {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
   }
   .flex-detail > .card {
     width: calc(80vw / 3);
