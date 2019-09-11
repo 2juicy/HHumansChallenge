@@ -1,0 +1,24 @@
+#sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: #d6d8d8;
+  display: flex;
+  float: left;
+  flex-direction: column;
+}
+
+.random {
+  margin: 50px auto 30px auto;
+  width: 85%;
+  height: 45px;
+  font-size: 24px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.colors {
+  font-size: 24px;
+  width: 85%;
+  margin: 10px auto 10px auto;
+}
