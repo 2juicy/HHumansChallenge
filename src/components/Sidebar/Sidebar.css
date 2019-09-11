@@ -1,8 +1,8 @@
 .sidebar {
   width: 20%;
-  height: calc(100vh - 100px);
+  height: 100%;
   background-color: #d6d8d8;
-  float: left;
+  position: fixed;
 }
 
 .random-button {
