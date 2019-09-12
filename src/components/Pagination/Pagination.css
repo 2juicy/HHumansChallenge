@@ -1,7 +1,10 @@
 .pages {
-  width: 80%;
+  width: 75%;
   margin: 1em 0 30px 20%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .page-link {
