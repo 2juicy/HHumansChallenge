@@ -7,9 +7,9 @@
 }
 
 .card:hover {
-  margin: 0 1em 0 0.5em;
+  margin: 0.5em 1em 0 0.5em;
   box-shadow: 0 0 20px lightgreen;
-  transition: margin 300ms ease-in-out;
+  transition: margin 300ms ease-in;
 }
 
 .card-color {
@@ -40,6 +40,6 @@
   .card:hover {
     margin-bottom: 0;
     box-shadow: 0 0 20px lightgreen;
-    transition: margin-bottom 300ms ease-in-out;
+    transition: margin-bottom 300ms ease-in;
   }
 }
