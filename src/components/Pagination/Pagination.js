@@ -9,7 +9,7 @@ export default function Pagination({ totalColors, colorsPerPage, paginate }) {
 
   return (
     <div className="pages">
-      <a href="#0" className="page-link">
+      <a onClick={() => paginate(-1)} href="#0" className="page-link">
         &laquo;
       </a>
 
@@ -24,7 +24,7 @@ export default function Pagination({ totalColors, colorsPerPage, paginate }) {
         </a>
       ))}
 
-      <a href="#0" className="page-link">
+      <a onClick={() => paginate(0)} href="#0" className="page-link">
         &raquo;
       </a>
     </div>

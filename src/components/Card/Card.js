@@ -1,11 +1,11 @@
 import React from "react";
 import "./Card.css";
 
-export default function Card({ color, details }) {
+export default function Card({ color, viewDetails }) {
   return (
     <div className="card">
       <div
-        onClick={() => details(color.colorId)}
+        onClick={() => viewDetails(color.colorId)}
         className="card-color"
         style={{ backgroundColor: color.hexString }}
       ></div>

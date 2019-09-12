@@ -11,9 +11,9 @@ export default function App() {
   const [colors, setColors] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showDetail, setShowDetail] = useState(false);
-  const [detailColor, setDetailColor] = useState();
+  const [details, setDetails] = useState();
   const [detailColors, setDetailColors] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
+  let [currentPage, setCurrentPage] = useState(1);
   const colorsPerPage = 12;
 
   // For now we fetch locally for colors, when an API endpoint is created we can fetch from server.
@@ -33,16 +33,29 @@ export default function App() {
   const currentColors = colors.slice(indexOfFirst, indexOfLast);
 
   // Functions for event handling
-  const paginate = page => setCurrentPage(page);
+  const paginate = page => {
+    if (page > 0) {
+      setCurrentPage(page);
+    } else if (
+      page === 0 &&
+      currentPage < Math.ceil(colors.length / colorsPerPage)
+    ) {
+      setCurrentPage(++currentPage);
+    } else if (page === -1 && currentPage > 1) {
+      setCurrentPage(--currentPage);
+    }
+  };
+
   const randomColor = () => {
     setShowDetail(true);
     const randomize = Math.floor(Math.random() * colors.length);
-    setDetailColor(colors[randomize]);
+    setDetails(colors[randomize]);
     setDetailColors(colors.slice(randomize + 1, randomize + 6));
   };
-  const details = colorId => {
+
+  const viewDetails = colorId => {
     setShowDetail(true);
-    setDetailColor(colors[colorId]);
+    setDetails(colors[colorId]);
     setDetailColors(colors.slice(colorId + 1, colorId + 6));
   };
   const clearDetail = () => {
@@ -55,7 +68,11 @@ export default function App() {
       <Sidebar random={randomColor} />
       {!showDetail ? (
         <React.Fragment>
-          <List colors={currentColors} loading={loading} details={details} />
+          <List
+            colors={currentColors}
+            loading={loading}
+            viewDetails={viewDetails}
+          />
           <Pagination
             colorsPerPage={colorsPerPage}
             totalColors={colors.length}
@@ -64,9 +81,9 @@ export default function App() {
         </React.Fragment>
       ) : (
         <Detail
-          detailColor={detailColor}
+          detail={details}
           colors={detailColors}
-          details={details}
+          viewDetails={viewDetails}
           clear={clearDetail}
         />
       )}
