@@ -4,6 +4,7 @@ import "./Card.css";
 export default function Card({ color, viewDetails }) {
   return (
     <div className="card">
+      <span className="tooltiptext">{color.name}</span>
       <div
         onClick={() => viewDetails(color.colorId)}
         className="card-color"

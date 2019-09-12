@@ -4,6 +4,7 @@
   margin: 1em 1em 0 1em;
   border-radius: 15px;
   box-shadow: 0 0 0 3px #e3e3e3;
+  position: relative;
 }
 
 .card:hover {
@@ -30,6 +31,24 @@
   text-align: center;
   vertical-align: middle;
   font-size: 22px;
+}
+
+.card .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  padding: 1px 5px 1px 5px;
+  bottom: 100%;
+  left: 15%;
+  border: 1px solid black;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  position: absolute;
+  z-index: 1;
+}
+
+.card:hover .tooltiptext {
+  visibility: visible;
 }
 
 @media only screen and (max-width: 1023px) {
