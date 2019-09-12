@@ -3,8 +3,9 @@ import "./Card.css";
 
 export default function Card({ color, details }) {
   return (
-    <div onClick={() => details(color.colorId)} className="card">
+    <div className="card">
       <div
+        onClick={() => details(color.colorId)}
         className="card-color"
         style={{ backgroundColor: color.hexString }}
       ></div>
