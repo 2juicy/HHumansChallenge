@@ -5,7 +5,7 @@ import Card from "../Card/Card";
 export default function Detail({ detail, colors, viewDetails, clear }) {
   return (
     <div id="detail">
-      <Card color={detail} details={viewDetails} />
+      <Card color={detail} viewDetails={viewDetails} />
       <div className="flex-detail">
         {colors.map(color => (
           <Card key={color.colorId} color={color} viewDetails={viewDetails} />
