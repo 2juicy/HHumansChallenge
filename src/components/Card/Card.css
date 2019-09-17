@@ -47,7 +47,6 @@
   z-index: 1;
 }
 
-#detail > .card:target .tooltip,
 .card:hover .tooltiptext {
   visibility: visible;
 }
