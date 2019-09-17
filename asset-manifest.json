@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/HHumansChallenge/static/css/main.c9bbad4a.chunk.css",
+    "main.css": "/HHumansChallenge/static/css/main.58babb8f.chunk.css",
     "main.js": "/HHumansChallenge/static/js/main.bb24c60f.chunk.js",
     "main.js.map": "/HHumansChallenge/static/js/main.bb24c60f.chunk.js.map",
     "runtime~main.js": "/HHumansChallenge/static/js/runtime~main.b96de939.js",
@@ -8,8 +8,8 @@
     "static/js/2.f5832fbc.chunk.js": "/HHumansChallenge/static/js/2.f5832fbc.chunk.js",
     "static/js/2.f5832fbc.chunk.js.map": "/HHumansChallenge/static/js/2.f5832fbc.chunk.js.map",
     "index.html": "/HHumansChallenge/index.html",
-    "precache-manifest.fec2c11f886b5208e54addce9bd87daf.js": "/HHumansChallenge/precache-manifest.fec2c11f886b5208e54addce9bd87daf.js",
+    "precache-manifest.491abeaa59f03e4fdf23624c26bdea3e.js": "/HHumansChallenge/precache-manifest.491abeaa59f03e4fdf23624c26bdea3e.js",
     "service-worker.js": "/HHumansChallenge/service-worker.js",
-    "static/css/main.c9bbad4a.chunk.css.map": "/HHumansChallenge/static/css/main.c9bbad4a.chunk.css.map"
+    "static/css/main.58babb8f.chunk.css.map": "/HHumansChallenge/static/css/main.58babb8f.chunk.css.map"
   }
 }
