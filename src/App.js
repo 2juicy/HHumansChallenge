@@ -56,7 +56,11 @@ export default function App() {
   const viewDetails = colorId => {
     setShowDetail(true);
     setDetails(colors[colorId]);
-    setDetailColors(colors.slice(colorId + 1, colorId + 6));
+    if (colorId + 6 > colors.length) {
+      setDetailColors(colors.slice(colorId - 6, colorId - 1));
+    } else {
+      setDetailColors(colors.slice(colorId + 1, colorId + 6));
+    }
   };
   const clearDetail = () => {
     setShowDetail(false);
