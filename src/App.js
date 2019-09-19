@@ -62,9 +62,6 @@ export default function App() {
       setDetailColors(colors.slice(colorId + 1, colorId + 6));
     }
   };
-  const clearDetail = () => {
-    setShowDetail(false);
-  };
 
   return (
     <div>
@@ -88,7 +85,7 @@ export default function App() {
           detail={details}
           colors={detailColors}
           viewDetails={viewDetails}
-          clear={clearDetail}
+          clear={() => setShowDetail(false)}
         />
       )}
     </div>
