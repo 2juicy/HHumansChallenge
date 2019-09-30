@@ -132,7 +132,7 @@
 "s": 0,
 "l": 50
 },
-"name": "Grey"
+"name": "Gray"
 },
 {
 "colorId": 9,
@@ -2701,18 +2701,18 @@
 },
 {
 "colorId": 180,
-"hexString": "#d7af87",
+"hexString": "#a52a2a",
 "rgb": {
-"r": 215,
-"g": 175,
-"b": 135
+"r": 165,
+"g": 42,
+"b": 42
 },
 "hsl": {
 "h": 30,
 "s": 50,
 "l": 68
 },
-"name": "Tan"
+"name": "Brown"
 },
 {
 "colorId": 181,
@@ -3211,10 +3211,10 @@
 },
 {
 "colorId": 214,
-"hexString": "#ffaf00",
+"hexString": "#ffa500",
 "rgb": {
 "r": 255,
-"g": 175,
+"g": 165,
 "b": 0
 },
 "hsl": {
@@ -3222,7 +3222,7 @@
 "s": 100,
 "l": 50
 },
-"name": "Orange1"
+"name": "Orange"
 },
 {
 "colorId": 215,
