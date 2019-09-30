@@ -63,10 +63,15 @@ export default function App() {
     }
   };
 
+  const searchColor = color => {
+    const index = colors.findIndex(x => x.name === color);
+    viewDetails(index);
+  };
+
   return (
     <div>
       <Header />
-      <Sidebar random={randomColor} />
+      <Sidebar random={randomColor} searchColor={searchColor} />
       {!showDetail ? (
         <React.Fragment>
           <List
