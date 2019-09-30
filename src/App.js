@@ -13,6 +13,7 @@ export default function App() {
   const [showDetail, setShowDetail] = useState(false);
   const [details, setDetails] = useState();
   const [detailColors, setDetailColors] = useState([]);
+  const [invalid, setInvalid] = useState(false);
   let [currentPage, setCurrentPage] = useState(1);
   const colorsPerPage = 12;
 
@@ -65,12 +66,21 @@ export default function App() {
 
   const searchColor = color => {
     const index = colors.findIndex(x => x.name === color);
-    if (index > -1) viewDetails(index);
+    if (index > -1) {
+      viewDetails(index);
+    } else {
+      if (!invalid) {
+        setInvalid(true);
+        setTimeout(() => {
+          setInvalid(false);
+        }, 3000);
+      }
+    }
   };
 
   return (
     <div>
-      <Header searchColor={searchColor} />
+      <Header searchColor={searchColor} invalid={invalid} />
       <Sidebar random={randomColor} searchColor={searchColor} />
       {!showDetail ? (
         <React.Fragment>
