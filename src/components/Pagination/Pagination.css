@@ -18,6 +18,6 @@
   background-color: #c0c0c0;
 }
 
-.page-link:focus {
+.active {
   color: red;
 }

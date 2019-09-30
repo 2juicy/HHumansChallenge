@@ -1,7 +1,12 @@
 import React from "react";
 import "./Pagination.css";
 
-export default function Pagination({ totalColors, colorsPerPage, paginate }) {
+export default function Pagination({
+  currentPage,
+  totalColors,
+  colorsPerPage,
+  paginate
+}) {
   const pages = [];
   for (let i = 1; i <= Math.ceil(totalColors / colorsPerPage); i++) {
     pages.push(i);
@@ -18,7 +23,7 @@ export default function Pagination({ totalColors, colorsPerPage, paginate }) {
           key={num}
           onClick={() => paginate(num)}
           href="#0"
-          className="page-link"
+          className={(currentPage === num ? "active " : "") + "page-link"}
         >
           {num}
         </a>

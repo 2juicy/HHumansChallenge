@@ -75,6 +75,7 @@ export default function App() {
             viewDetails={viewDetails}
           />
           <Pagination
+            currentPage={currentPage}
             colorsPerPage={colorsPerPage}
             totalColors={colors.length}
             paginate={paginate}
