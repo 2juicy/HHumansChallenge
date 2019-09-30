@@ -6,9 +6,7 @@ export default function Header({ searchColor, invalid }) {
 
   const keyPress = e => {
     if (e.keyCode === 13) {
-      const color =
-        e.target.value.charAt(0).toUpperCase() + e.target.value.substring(1);
-      searchColor(color);
+      searchColor(e.target.value);
     }
   };
 

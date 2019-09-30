@@ -65,7 +65,9 @@ export default function App() {
   };
 
   const searchColor = color => {
-    const index = colors.findIndex(x => x.name === color);
+    const index = colors.findIndex(
+      x => x.name.toLowerCase() === color.toLowerCase()
+    );
     if (index > -1) {
       viewDetails(index);
     } else {
