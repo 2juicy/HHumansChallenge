@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 
-export default function Header() {
+export default function Header({ searchColor }) {
+  const [value, setValue] = useState("");
+
+  const keyPress = e => {
+    if (e.keyCode === 13) {
+      const color =
+        e.target.value.charAt(0).toUpperCase() + e.target.value.substring(1);
+      searchColor(color);
+    }
+  };
+
   return (
     <header id="header-component">
       <div className="logo">
@@ -12,7 +22,14 @@ export default function Header() {
           />
         </a>
       </div>
-      <input className="search" label="Search" placeholder="Search" />
+      <input
+        value={value}
+        onChange={e => setValue(e.target.value)}
+        onKeyDown={keyPress}
+        className="search"
+        label="Search"
+        placeholder="Search"
+      />
     </header>
   );
 }
