@@ -21,7 +21,7 @@ export default function App() {
   useEffect(() => {
     (async function() {
       setLoading(true);
-      let res = await fetch("colors.json");
+      let res = await fetch("colors2.json");
       if (!res.ok) throw new Error("Failed to fetch");
       let json = await res.json();
       setColors(json);
