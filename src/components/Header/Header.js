@@ -14,7 +14,7 @@ export default function Header({ searchColor, invalid, filterInput }) {
   return (
     <header id="header-component">
       <div className="logo">
-        <a href="/">
+        <a href="#0">
           <img
             alt="Helpful Humans"
             src={process.env.PUBLIC_URL + "/assets/logo.svg"}
