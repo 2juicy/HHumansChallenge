@@ -66,7 +66,9 @@ export default function App() {
 
   const searchColor = color => {
     const index = colors.findIndex(
-      x => x.name.toLowerCase() === color.toLowerCase()
+      x =>
+        x.name.toLowerCase().replace(/\s/g, "") ===
+        color.toLowerCase().replace(/\s/g, "")
     );
     if (index > -1) {
       viewDetails(index);
