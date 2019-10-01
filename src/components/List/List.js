@@ -6,7 +6,7 @@ export default function List({ colors, loading, viewDetails }) {
   if (loading) {
     return <h1 style={{ textAlign: "center" }}>Loading...</h1>;
   }
-  console.log(colors);
+
   return (
     <section id="list-section">
       {colors.length ? (
