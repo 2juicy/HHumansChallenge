@@ -13,25 +13,29 @@ export default function Pagination({
   }
 
   return (
-    <div className="pages">
-      <a onClick={() => paginate(-1)} href="#0" className="page-link">
-        &laquo;
-      </a>
+    <React.Fragment>
+      {pages.length ? (
+        <div className="pages">
+          <a onClick={() => paginate(-1)} href="#0" className="page-link">
+            &laquo;
+          </a>
 
-      {pages.map(num => (
-        <a
-          key={num}
-          onClick={() => paginate(num)}
-          href="#0"
-          className={(currentPage === num ? "active " : "") + "page-link"}
-        >
-          {num}
-        </a>
-      ))}
+          {pages.map(num => (
+            <a
+              key={num}
+              onClick={() => paginate(num)}
+              href="#0"
+              className={(currentPage === num ? "active " : "") + "page-link"}
+            >
+              {num}
+            </a>
+          ))}
 
-      <a onClick={() => paginate(0)} href="#0" className="page-link">
-        &raquo;
-      </a>
-    </div>
+          <a onClick={() => paginate(0)} href="#0" className="page-link">
+            &raquo;
+          </a>
+        </div>
+      ) : null}
+    </React.Fragment>
   );
 }
