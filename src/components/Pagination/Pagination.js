@@ -13,9 +13,9 @@ export default function Pagination({
   }
 
   return (
-    <React.Fragment>
-      {pages.length ? (
-        <div className="pages">
+    <div className="pages">
+      {pages.length > 1 ? (
+        <React.Fragment>
           <a onClick={() => paginate(-1)} href="#0" className="page-link">
             &laquo;
           </a>
@@ -34,8 +34,8 @@ export default function Pagination({
           <a onClick={() => paginate(0)} href="#0" className="page-link">
             &raquo;
           </a>
-        </div>
+        </React.Fragment>
       ) : null}
-    </React.Fragment>
+    </div>
   );
 }
