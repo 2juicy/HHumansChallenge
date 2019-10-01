@@ -98,7 +98,7 @@ export default function App() {
         colors[i].name
           .toLowerCase()
           .replace(/\s/g, "")
-          .indexOf(input) > -1
+          .indexOf(input.toLowerCase()) > -1
       ) {
         newColors.push(colors[i]);
       }

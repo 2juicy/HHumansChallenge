@@ -25,10 +25,10 @@ export default function Header({ searchColor, invalid, filterInput }) {
         value={value}
         onChange={e => setValue(e.target.value)}
         onKeyDown={keyPress}
-        onKeyUp={e => filterInput(e.target.value)}
+        onKeyUp={e => filterInput(e.target.value.trim())}
         className={(invalid ? "blink " : "") + "search"}
         label="Search"
-        placeholder="Search"
+        placeholder="Search/Filter"
       />
     </header>
   );
