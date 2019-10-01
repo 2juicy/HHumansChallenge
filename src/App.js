@@ -47,7 +47,7 @@ export default function App() {
       setCurrentPage(page);
     } else if (
       page === 0 &&
-      currentPage < Math.ceil(colors.length / colorsPerPage)
+      currentPage < Math.ceil(filteredColors.length / colorsPerPage)
     ) {
       setCurrentPage(++currentPage);
     } else if (page === -1 && currentPage > 1) {
@@ -91,9 +91,9 @@ export default function App() {
   };
 
   const filterInput = input => {
+    setCurrentPage(1);
     let newColors = [];
     for (let i = 0; i < colors.length; i++) {
-      console.log(colors[i].name);
       if (
         colors[i].name
           .toLowerCase()
@@ -103,7 +103,6 @@ export default function App() {
         newColors.push(colors[i]);
       }
     }
-    console.log(newColors);
     setFilter(newColors);
   };
 
