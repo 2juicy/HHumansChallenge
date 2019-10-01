@@ -94,7 +94,12 @@ export default function App() {
     setCurrentPage(1);
     let newColors = [];
     for (let i = 0; i < colors.length; i++) {
-      if (colors[i].name.toLowerCase().indexOf(input.toLowerCase()) > -1) {
+      if (
+        colors[i].name
+          .toLowerCase()
+          .replace(/\s/g, "")
+          .indexOf(input.toLowerCase().replace(/\s/g, "")) > -1
+      ) {
         newColors.push(colors[i]);
       }
     }
