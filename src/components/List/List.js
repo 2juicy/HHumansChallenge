@@ -9,12 +9,12 @@ export default function List({ colors, loading, viewDetails }) {
   console.log(colors);
   return (
     <section id="list-section">
-      {!colors.length ? (
-        <h1 style={{ textAlign: "center" }}>No results...</h1>
-      ) : (
+      {colors.length ? (
         colors.map(color => (
           <Card key={color.colorId} color={color} viewDetails={viewDetails} />
         ))
+      ) : (
+        <h1 style={{ textAlign: "center" }}>No results...</h1>
       )}
     </section>
   );
