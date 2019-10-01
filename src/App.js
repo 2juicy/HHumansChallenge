@@ -74,8 +74,8 @@ export default function App() {
 
   const searchColor = input => {
     const index = colors.findIndex(
-      x =>
-        x.name.toLowerCase().replace(/\s/g, "") ===
+      color =>
+        color.name.toLowerCase().replace(/\s/g, "") ===
         input.toLowerCase().replace(/\s/g, "")
     );
     if (index > -1) {
