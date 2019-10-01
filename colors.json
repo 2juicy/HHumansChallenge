@@ -457,23 +457,23 @@
   },
   {
     "colorId": 91,
-    "hexString": "#FFD7FF",
-    "name": "Thistle"
-  },
-  {
-    "colorId": 92,
-    "hexString": "#FFD7D7",
-    "name": "Misty Rose"
-  },
-  {
-    "colorId": 93,
     "hexString": "#FFD7AF",
     "name": "Navajo White"
   },
   {
-    "colorId": 94,
+    "colorId": 92,
     "hexString": "#FFD700",
     "name": "Gold"
+  },
+  {
+    "colorId": 93,
+    "hexString": "#FFD7D7",
+    "name": "Misty Rose"
+  },
+  {
+    "colorId": 94,
+    "hexString": "#FFD7FF",
+    "name": "Thistle"
   },
   {
     "colorId": 95,
@@ -482,13 +482,13 @@
   },
   {
     "colorId": 96,
-    "hexString": "#FF875F",
-    "name": "Salmon"
+    "hexString": "#FF5FAF",
+    "name": "Hot Pink"
   },
   {
     "colorId": 97,
-    "hexString": "#FF5FAF",
-    "name": "Hot Pink"
+    "hexString": "#FF875F",
+    "name": "Salmon"
   },
   {
     "colorId": 98,
