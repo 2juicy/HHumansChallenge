@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 
-export default function Header({ searchColor, invalid }) {
+export default function Header({ searchColor, invalid, filterInput }) {
   const [value, setValue] = useState("");
 
   const keyPress = e => {
@@ -24,6 +24,7 @@ export default function Header({ searchColor, invalid }) {
         value={value}
         onChange={e => setValue(e.target.value)}
         onKeyDown={keyPress}
+        onKeyUp={e => filterInput(e.target.value)}
         className={(invalid ? "blink " : "") + "search"}
         label="Search"
         placeholder="Search"

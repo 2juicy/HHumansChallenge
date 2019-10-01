@@ -9,6 +9,7 @@ import Detail from "./components/Detail/Detail";
 
 export default function App() {
   const [colors, setColors] = useState([]);
+  const [filteredColors, setFilter] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showDetail, setShowDetail] = useState(false);
   const [details, setDetails] = useState();
@@ -25,13 +26,20 @@ export default function App() {
       if (!res.ok) throw new Error("Failed to fetch");
       let json = await res.json();
       setColors(json);
+      setFilter(json);
       setLoading(false);
     })().catch(err => console.error(err));
   }, []);
 
   const indexOfLast = currentPage * colorsPerPage;
   const indexOfFirst = indexOfLast - colorsPerPage;
-  const currentColors = colors.slice(indexOfFirst, indexOfLast);
+  const [currentColors, setCurrentColors] = useState(
+    filteredColors.slice(indexOfFirst, indexOfLast)
+  );
+
+  useEffect(() => {
+    setCurrentColors(filteredColors.slice(indexOfFirst, indexOfLast));
+  }, [filteredColors, indexOfFirst, indexOfLast]);
 
   // Functions for event handling
   const paginate = page => {
@@ -64,11 +72,11 @@ export default function App() {
     }
   };
 
-  const searchColor = color => {
+  const searchColor = input => {
     const index = colors.findIndex(
       x =>
         x.name.toLowerCase().replace(/\s/g, "") ===
-        color.toLowerCase().replace(/\s/g, "")
+        input.toLowerCase().replace(/\s/g, "")
     );
     if (index > -1) {
       viewDetails(index);
@@ -82,9 +90,30 @@ export default function App() {
     }
   };
 
+  const filterInput = input => {
+    let newColors = [];
+    for (let i = 0; i < colors.length; i++) {
+      console.log(colors[i].name);
+      if (
+        colors[i].name
+          .toLowerCase()
+          .replace(/\s/g, "")
+          .indexOf(input) > -1
+      ) {
+        newColors.push(colors[i]);
+      }
+    }
+    console.log(newColors);
+    setFilter(newColors);
+  };
+
   return (
     <div>
-      <Header searchColor={searchColor} invalid={invalid} />
+      <Header
+        filterInput={filterInput}
+        searchColor={searchColor}
+        invalid={invalid}
+      />
       <Sidebar random={randomColor} searchColor={searchColor} />
       {!showDetail ? (
         <React.Fragment>
@@ -96,7 +125,7 @@ export default function App() {
           <Pagination
             currentPage={currentPage}
             colorsPerPage={colorsPerPage}
-            totalColors={colors.length}
+            totalColors={filteredColors.length}
             paginate={paginate}
           />
         </React.Fragment>
