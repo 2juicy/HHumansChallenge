@@ -10,6 +10,11 @@ export default function Header({ searchColor, invalid, filterInput }) {
     }
   };
 
+  const onFocusBlur = () => {
+    setValue("");
+    filterInput("");
+  };
+
   return (
     <header id="header-component">
       <div className="logo">
@@ -22,14 +27,8 @@ export default function Header({ searchColor, invalid, filterInput }) {
       </div>
       <input
         value={value}
-        onFocus={() => {
-          setValue("");
-          filterInput("");
-        }}
-        onBlur={() => {
-          setValue("");
-          filterInput("");
-        }}
+        onFocus={onFocusBlur}
+        onBlur={onFocusBlur}
         onChange={e => setValue(e.target.value)}
         onKeyDown={keyDown}
         onKeyUp={e => filterInput(e.target.value.trim())}
