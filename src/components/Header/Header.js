@@ -4,10 +4,9 @@ import "./Header.css";
 export default function Header({ searchColor, invalid, filterInput }) {
   const [value, setValue] = useState("");
 
-  const keyPress = e => {
+  const keyDown = e => {
     if (e.keyCode === 13) {
       searchColor(e.target.value.trim());
-      setValue("");
     }
   };
 
@@ -23,8 +22,16 @@ export default function Header({ searchColor, invalid, filterInput }) {
       </div>
       <input
         value={value}
+        onFocus={() => {
+          setValue("");
+          filterInput("");
+        }}
+        onBlur={() => {
+          setValue("");
+          filterInput("");
+        }}
         onChange={e => setValue(e.target.value)}
-        onKeyDown={keyPress}
+        onKeyDown={keyDown}
         onKeyUp={e => filterInput(e.target.value.trim())}
         className={(invalid ? "blink " : "") + "search"}
         label="Search"
