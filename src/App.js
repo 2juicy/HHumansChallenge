@@ -39,7 +39,10 @@ export default function App() {
 
   useEffect(() => {
     setCurrentColors(filteredColors.slice(indexOfFirst, indexOfLast));
-  }, [filteredColors, indexOfFirst, indexOfLast]);
+    if (currentPage > Math.ceil(filteredColors.length / colorsPerPage)) {
+      setCurrentPage(1);
+    }
+  }, [filteredColors, currentPage, indexOfFirst, indexOfLast]);
 
   // Functions for event handling
   const paginate = page => {
@@ -91,23 +94,18 @@ export default function App() {
   };
 
   const filterInput = input => {
-    if (!input) {
-      setFilter(colors);
-    } else {
-      setCurrentPage(1);
-      let newColors = [];
-      colors.forEach(color => {
-        if (
-          color.name
-            .toLowerCase()
-            .replace(/\s/g, "")
-            .indexOf(input.toLowerCase().replace(/\s/g, "")) > -1
-        ) {
-          newColors.push(color);
-        }
-      });
-      setFilter(newColors);
-    }
+    let newColors = [];
+    colors.forEach(color => {
+      if (
+        color.name
+          .toLowerCase()
+          .replace(/\s/g, "")
+          .indexOf(input.toLowerCase().replace(/\s/g, "")) > -1
+      ) {
+        newColors.push(color);
+      }
+    });
+    setFilter(newColors);
   };
 
   return (
