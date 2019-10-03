@@ -93,16 +93,16 @@ export default function App() {
   const filterInput = input => {
     setCurrentPage(1);
     let newColors = [];
-    for (let i = 0; i < colors.length; i++) {
+    colors.forEach(color => {
       if (
-        colors[i].name
+        color.name
           .toLowerCase()
           .replace(/\s/g, "")
           .indexOf(input.toLowerCase().replace(/\s/g, "")) > -1
       ) {
-        newColors.push(colors[i]);
+        newColors.push(color);
       }
-    }
+    });
     setFilter(newColors);
   };
 
