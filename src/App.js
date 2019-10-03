@@ -91,19 +91,23 @@ export default function App() {
   };
 
   const filterInput = input => {
-    setCurrentPage(1);
-    let newColors = [];
-    colors.forEach(color => {
-      if (
-        color.name
-          .toLowerCase()
-          .replace(/\s/g, "")
-          .indexOf(input.toLowerCase().replace(/\s/g, "")) > -1
-      ) {
-        newColors.push(color);
-      }
-    });
-    setFilter(newColors);
+    if (!input) {
+      setFilter(colors);
+    } else {
+      setCurrentPage(1);
+      let newColors = [];
+      colors.forEach(color => {
+        if (
+          color.name
+            .toLowerCase()
+            .replace(/\s/g, "")
+            .indexOf(input.toLowerCase().replace(/\s/g, "")) > -1
+        ) {
+          newColors.push(color);
+        }
+      });
+      setFilter(newColors);
+    }
   };
 
   return (
