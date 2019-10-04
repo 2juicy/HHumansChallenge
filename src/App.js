@@ -40,8 +40,11 @@ export default function App() {
   useEffect(() => {
     setCurrentColors(filteredColors.slice(indexOfFirst, indexOfLast));
     if (currentPage > Math.ceil(filteredColors.length / colorsPerPage)) {
-      setCurrentPage(1);
+      setCurrentPage(Math.ceil(filteredColors.length / colorsPerPage));
     }
+    return () => {
+      if (currentPage === 0) setCurrentPage(1);
+    };
   }, [filteredColors, currentPage, indexOfFirst, indexOfLast]);
 
   // Functions for event handling
