@@ -33,19 +33,16 @@ export default function App() {
 
   const indexOfLast = currentPage * colorsPerPage;
   const indexOfFirst = indexOfLast - colorsPerPage;
-  const [currentColors, setCurrentColors] = useState(
-    filteredColors.slice(indexOfFirst, indexOfLast)
-  );
+  const currentColors = filteredColors.slice(indexOfFirst, indexOfLast);
 
   useEffect(() => {
-    setCurrentColors(filteredColors.slice(indexOfFirst, indexOfLast));
-    if (currentPage > Math.ceil(filteredColors.length / colorsPerPage)) {
+    if (
+      currentPage > Math.ceil(filteredColors.length / colorsPerPage) &&
+      currentPage !== 1
+    ) {
       setCurrentPage(Math.ceil(filteredColors.length / colorsPerPage));
     }
-    return () => {
-      if (currentPage === 0) setCurrentPage(1);
-    };
-  }, [filteredColors, currentPage, indexOfFirst, indexOfLast]);
+  }, [filteredColors, currentPage]);
 
   // Functions for event handling
   const paginate = page => {
