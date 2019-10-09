@@ -4,8 +4,6 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import List from "./components/List/List";
 import Pagination from "./components/Pagination/Pagination";
 import Detail from "./components/Detail/Detail";
-// Without a backend we can import the colors directly
-// import colors from "./colors.json";
 
 export default function App() {
   const [colors, setColors] = useState([]);
@@ -18,11 +16,10 @@ export default function App() {
   let [currentPage, setCurrentPage] = useState(1);
   const colorsPerPage = 12;
 
-  // For now we fetch locally for colors, when an API endpoint is created we can fetch from server.
   useEffect(() => {
     (async function() {
       setLoading(true);
-      let res = await fetch("colors.json");
+      let res = await fetch("/api/colors");
       if (!res.ok) throw new Error("Failed to fetch");
       let json = await res.json();
       setColors(json);
