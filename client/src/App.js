@@ -33,12 +33,12 @@ export default function App() {
   const currentColors = filteredColors.slice(indexOfFirst, indexOfLast);
 
   useEffect(() => {
-    if (
-      currentPage > Math.ceil(filteredColors.length / colorsPerPage) &&
-      currentPage !== 1
-    ) {
+    if (currentPage > Math.ceil(filteredColors.length / colorsPerPage)) {
       setCurrentPage(Math.ceil(filteredColors.length / colorsPerPage));
     }
+    return () => {
+      if (currentPage < 1) setCurrentPage(1);
+    };
   }, [filteredColors, currentPage]);
 
   // Functions for event handling
