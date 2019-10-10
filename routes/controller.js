@@ -2,7 +2,7 @@ module.exports = app => {
   const db = require("../models");
 
   app.get("/api/colors", (req, res) => {
-    db.Color.find({}).then(function(results) {
+    db.Color.find({}).then(results => {
       res.json(results);
     });
   });
