@@ -1,3 +1,5 @@
+// Using colors.json as seed for MongoDB
+
 module.exports = app => {
   const db = require("../models");
 
