@@ -4,7 +4,7 @@ Full-stack MERN application deployed here on GitHub pages.
 
 https://2juicy.github.io/HHumansChallenge
 
-## Features
+# Features
 
 - Database made with MongoDB of 100+ different colors.
 - Pagination to display colors in multiple pages.
@@ -15,14 +15,18 @@ https://2juicy.github.io/HHumansChallenge
 - Ability to select a random color and adjust view accordingly.
 - Responsive design.
 
-## Prerequisites
+# Quick Start
 
-To install download files and install Node modules by typing
-`npm install`
-into the terminal. Client files will also be installed.
+Install server dependancies `npm install`
 
-To add seed data into MongoDB, navigate to the model folder inside your terminal and type
-`node color-seeder.js`
+Install client dependancies `npm run client-install`
 
-To start the app navigate back to the main directory and type
-`npm run dev`
+To add seed data into MongoDB `node color-seeder.js`
+
+Run client and with server concurrently `npm run dev`
+
+Run express server only `npm run server`
+
+Run React client only `npm run client`
+
+Server runs on http://localhost:5000 and client on http://localhost:3000
