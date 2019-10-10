@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const ColorSchema = new Schema({
-  colorId: Number,
-  hexString: String,
-  name: String
+  colorId: { type: Number, required: true },
+  hexString: { type: String, required: true },
+  name: { type: String, required: true }
 });
 
 const Color = mongoose.model("Color", ColorSchema);
