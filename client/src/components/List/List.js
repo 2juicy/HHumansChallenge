@@ -11,7 +11,7 @@ export default function List({ colors, loading, viewDetails }) {
     <section id="list-section">
       {colors.length ? (
         colors.map(color => (
-          <Card key={color._id} color={color} viewDetails={viewDetails} />
+          <Card key={color.colorId} color={color} viewDetails={viewDetails} />
         ))
       ) : (
         <h1 style={{ textAlign: "center" }}>No results...</h1>
