@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const ColorSchema = new Schema({
-  colorId: Schema.ObjectId,
+  colorId: Number,
   hexString: String,
   name: String
 });

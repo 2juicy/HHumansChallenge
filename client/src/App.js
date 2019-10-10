@@ -22,6 +22,7 @@ export default function App() {
       let res = await fetch("/api/colors");
       if (!res.ok) throw new Error("Failed to fetch");
       let json = await res.json();
+      console.log(json[0]);
       setColors(json);
       setFilter(json);
       setLoading(false);
