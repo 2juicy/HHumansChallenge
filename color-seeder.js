@@ -1,5 +1,4 @@
-// Navigate to the /HHumansChallenge/model folder and run "node color-seeder.js" to add the seed into database
-const seed = require("../model/seed");
+const seed = require("./seed");
 const Color = require("./model/Color");
 
 const mongoose = require("mongoose");
