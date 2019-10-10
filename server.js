@@ -26,7 +26,7 @@ mongoose.connect(MONGODB_URI);
 // Import routes and give the server access to them.
 // Routes
 // =============================================================
-require("./routes/controller.js")(app);
+require("./controller/controller.js")(app);
 
 // Start the server
 app.listen(PORT, () =>
