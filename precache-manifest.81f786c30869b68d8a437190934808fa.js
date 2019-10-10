@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d328927a6e0bf41df2384369c0c2d31a",
+    "revision": "dcd423108dbd6a2c34250371e800c01c",
     "url": "/HHumansChallenge/index.html"
   },
   {
-    "revision": "6395e62121cf5598efb1",
+    "revision": "cd4d648ae39944d45dbe",
     "url": "/HHumansChallenge/static/css/main.772ed377.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/HHumansChallenge/static/js/2.f5832fbc.chunk.js"
   },
   {
-    "revision": "6395e62121cf5598efb1",
-    "url": "/HHumansChallenge/static/js/main.96bcad74.chunk.js"
+    "revision": "cd4d648ae39944d45dbe",
+    "url": "/HHumansChallenge/static/js/main.bbdcf151.chunk.js"
   },
   {
     "revision": "ca368bd6a27ddae970b8",
