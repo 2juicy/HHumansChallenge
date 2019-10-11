@@ -7,18 +7,12 @@ mongoose.connect("mongodb://localhost/mongoColors", {
   useUnifiedTopology: true
 });
 
-const colors = [];
-
-seed.forEach(color => {
-  colors.push(new Color(color));
-});
-
 let done = 0;
 
-colors.forEach(color => {
-  color.save(() => {
+seed.forEach(color => {
+  new Color(color).save(() => {
     done++;
-    if (done === colors.length) {
+    if (done === seed.length) {
       mongoose.disconnect();
       console.log(`ԅ༼ ◔ ڡ ◔ ༽ง Seed planted`);
     }
