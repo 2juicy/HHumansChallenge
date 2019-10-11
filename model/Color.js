@@ -5,7 +5,8 @@ const ColorSchema = new Schema({
   colorId: {
     type: Number,
     required: true,
-    unique: true
+    unique: true,
+    index: true
   },
   hexString: { type: String, required: true },
   name: { type: String, required: true }
