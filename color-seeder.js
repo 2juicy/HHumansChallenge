@@ -3,6 +3,7 @@ const Color = require("./model/Color");
 
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost/mongoColors", {
+  useCreateIndex: true,
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
