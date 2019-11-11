@@ -8391,15 +8391,15 @@ react-dev-utils@^9.0.3:
     strip-ansi "5.2.0"
     text-table "0.2.0"
 
-react-dom@^16.9.0:
-  version "16.9.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.9.0.tgz#5e65527a5e26f22ae3701131bcccaee9fb0d3962"
-  integrity sha512-YFT2rxO9hM70ewk9jq0y6sQk8cL02xm4+IzYBz75CQGlClQQ1Bxq0nhHF6OtSbit+AIahujJgb/CPRibFkMNJQ==
+react-dom@^0.0.0-experimental-38dd17ab9:
+  version "0.0.0-experimental-38dd17ab9"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-0.0.0-experimental-38dd17ab9.tgz#74e040bb234bf8df4ea129814e6f099ccd31639e"
+  integrity sha512-PemrIDeg/5hhkU0Ota8vWPm9noyrQ2qQTpPFS2EAyNz3Nb499dM/+STaczkVgLmfoiwd8zQdHWM7Q7ijHyT56A==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.15.0"
+    scheduler "0.0.0-experimental-38dd17ab9"
 
 react-error-overlay@^6.0.1:
   version "6.0.1"
@@ -8472,10 +8472,10 @@ react-scripts@3.1.1:
   optionalDependencies:
     fsevents "2.0.7"
 
-react@^16.9.0:
-  version "16.9.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"
-  integrity sha512-+7LQnFBwkiw+BobzOF6N//BdoNw0ouwmSJTEm9cglOOmsg/TMiFHZLe2sEoN5M7LgJTj9oHH0gxklfnQe66S1w==
+react@^0.0.0-experimental-38dd17ab9:
+  version "0.0.0-experimental-38dd17ab9"
+  resolved "https://registry.yarnpkg.com/react/-/react-0.0.0-experimental-38dd17ab9.tgz#d2cc104de47fa58abb4297f27bcc54854e20581a"
+  integrity sha512-rPEXj4mppahrDR+jpDd/sYAkRiwhgTvxtehM5kNDPtTnzz6RChflHZ9U8inQpVdX/nkcnO6r92JyBxJaR+6tVg==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -8935,10 +8935,10 @@ saxes@^3.1.9:
   dependencies:
     xmlchars "^1.3.1"
 
-scheduler@^0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.15.0.tgz#6bfcf80ff850b280fed4aeecc6513bc0b4f17f8e"
-  integrity sha512-xAefmSfN6jqAa7Kuq7LIJY0bwAPG3xlCj0HMEBQk1lxYiDKZscY2xJ5U/61ZTrYbmNQbXa+gc7czPkVo11tnCg==
+scheduler@0.0.0-experimental-38dd17ab9:
+  version "0.0.0-experimental-38dd17ab9"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.0.0-experimental-38dd17ab9.tgz#59e1ab1df3a92e270ad0c94b474284185740b01d"
+  integrity sha512-F2OVE+lm5Pxv5DlxB/c9xs0qBYBIUexxpJEi7yjic2aW1iiP4FrYnJNS9D4mWDHvwV0H5spDEURW5resrgsY+g==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
