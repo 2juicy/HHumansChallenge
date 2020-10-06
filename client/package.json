@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@babel/runtime": "^7.6.0",
-    "react": "^0.0.0-experimental-38dd17ab9",
+    "react": "^0.14.0",
     "react-dom": "^0.0.0-experimental-38dd17ab9",
     "react-scripts": "3.1.1"
   },
